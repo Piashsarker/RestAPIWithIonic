@@ -1,0 +1,25 @@
+<!--
+  Generated template for the NinjaListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Ninja List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <button ion-item *ngFor="let ninja of ninjas" (click)="itemTapped($event, ninja)">
+            {{ninja.name}}
+            <div class="item-note" item-right>
+                {{ninja.rank}}
+            </div>
+        </button>
+    </ion-list>
+</ion-content>
